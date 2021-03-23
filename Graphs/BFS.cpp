@@ -25,6 +25,7 @@ class Graph {
     void addVertex(string data) {
         vertexList.push_back(Vertex(data));
     }
+    // Directed
     void set_edge(int u, int v) {
         vertexList[u].neighbours.push_back(v);
     }

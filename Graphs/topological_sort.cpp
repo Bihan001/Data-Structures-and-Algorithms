@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// In the graph, we have an array of vertexes. When we set edges of the vertexes, we consider the vertex's index in the array instead of the vertex itself.
+// In the graph, we have an array of vertices. When we set edges of the vertices, we consider the vertex's index in the array instead of the vertex itself.
 // Every vertex object holds a data variable and the list of indexes of its neighbours.
 
 class Vertex {

@@ -1,3 +1,10 @@
+// Problem: Minimum Spanning Tree
+// Contest: SPOJ - Partial
+// URL: https://www.spoj.com/problems/MST/
+// Memory Limit: 1536 MB
+// Time Limit: 2000 ms
+// Author: Bihan Chakraborty
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -37,13 +44,19 @@ bool comp(vi &a, vi &b) {
 vector<vi> kurskal(vector<vi> &edges) {
     vector<vi> mst;
     mii parent, rank;
+
+    // Sorting edges in ascending order of edge weights
     sort(edges.begin(), edges.end(), comp);
+
+    // Initializing DSU
     for (auto edge : edges) {
         parent[edge[0]] = edge[0];
         parent[edge[1]] = edge[1];
         rank[edge[0]] = 0;
         rank[edge[1]] = 0;
     }
+
+    // Performing union operations on disjoint edges and adding to mst array. We move from lowest to highest edge cost greedily since the edges array is sorted.
     for (auto edge : edges) {
         int x = Get(parent, edge[0]);
         int y = Get(parent, edge[1]);
@@ -54,16 +67,24 @@ vector<vi> kurskal(vector<vi> &edges) {
     return mst;
 }
 
+void add_edge(vector<vi> &edges, int src, int dest, int weight) {
+    edges.pb({src, dest, weight});
+    edges.pb({dest, src, weight});
+}
+
 int main() {
     vector<vi> edges;
-    edges.pb({0, 1, 10});
-    edges.pb({0, 2, 6});
-    edges.pb({0, 3, 5});
-    edges.pb({1, 3, 15});
-    edges.pb({2, 3, 4});
+    add_edge(edges, 0, 1, 10);
+    add_edge(edges, 0, 2, 6);
+    add_edge(edges, 0, 3, 5);
+    add_edge(edges, 1, 3, 15);
+    add_edge(edges, 2, 3, 4);
     vector<vi> mst = kurskal(edges);
+    int total_cost = 0;
     for (auto it : mst) {
         cout << "Src: " << it[0] << " Dest: " << it[1] << " Weight: " << it[2] << endl;
+        total_cost += it[2];
     }
+    cout << "Total MST cost: " << total_cost << endl;
     return 0;
 }
