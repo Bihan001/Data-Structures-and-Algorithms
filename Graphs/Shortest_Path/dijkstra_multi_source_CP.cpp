@@ -12,7 +12,24 @@ using namespace std;
 #define printarr(arr, n) \
     for (ll i = 0; i < n; i++) cout << arr[i] << ' ';
 
-// Works with both directed and undirected weighted graphs
+/*
+   # This algorithm is Greedy based.
+   
+   # This algorithm is used for finding the shortest path(as well as their costs) from multiple starting nodes to all 
+     other nodes in a weighted & UD/DG.
+
+   # The edges of the graph can be unidirectional/bidirectional.
+   
+   # Dijkstra’s algorithm doesn’t work for graphs with -𝒗𝒆 𝒘𝒆𝒊𝒈𝒉𝒕 𝒄𝒚𝒄𝒍𝒆𝒔, it 𝑴𝑨𝒀 give correct results for a 
+     graph with -𝒗𝒆 𝒆𝒅𝒈𝒆𝒔. 
+
+   # For graphs with negative weight edges and cycles, 𝑩𝒆𝒍𝒍𝒎𝒂𝒏–𝑭𝒐𝒓𝒅 𝒂𝒍𝒈𝒐𝒓𝒊𝒕𝒉𝒎 can be used.
+     
+   # This algorithm basically creates trees of shortest paths from the starting vertices, to all 
+     other points in the graph.
+
+   # Time Complexity: O(V x log(E))
+*/
 
 pair<vi, vi> multi_dijkstra(vector<vector<pii>> &graph, vi src, int n) {
     set<pii> s;

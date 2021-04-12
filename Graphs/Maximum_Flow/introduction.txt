@@ -1,0 +1,36 @@
+# A 𝒏𝒆𝒕𝒘𝒐𝒓𝒌 is a 𝒅𝒊𝒓𝒆𝒄𝒕𝒆𝒅 𝒈𝒓𝒂𝒑𝒉 G with vertices V and edges E combined with a function c, which assigns each edge 
+  e ∈ E a non-negative integer value, the capacity of e. 
+  Such a network is called a 𝒇𝒍𝒐𝒘 𝒏𝒆𝒕𝒘𝒐𝒓𝒌, if we additionally label two vertices, one as 𝒔𝒐𝒖𝒓𝒄𝒆 and one as 𝒔𝒊𝒏𝒌.
+
+# A 𝒇𝒍𝒐𝒘 in a flow network is function f, that again assigns each edge e a non-negative integer value, namely the
+  flow. The function has to fulfill the following two conditions:
+  • The flow of an edge cannot exceed the capacity.
+  • And the sum of the incoming flow of a vertex u has to be equal to the sum of the outgoing flow of u except 
+    in the source and sink vertices. The source vertex s only has an outgoing flow, and the sink vertex t has 
+    only incoming flow. And the sum of outflow of source must be = sum of inflow of sink.
+
+# Or we can say 𝒇𝒍𝒐𝒘 is the exact amount of material flowing through the edge.
+# While 𝒄𝒂𝒑𝒂𝒄𝒊𝒕𝒚 is the maximum amount of material that can flow through the edge.
+
+# 𝑹𝒆𝒔𝒊𝒅𝒖𝒂𝒍 𝒄𝒂𝒑𝒂𝒄𝒊𝒕𝒚 = capacity - flow (for an edge).
+# 𝑹𝒆𝒗𝒆𝒓𝒔𝒆 𝒆𝒅𝒈𝒆 𝒓𝒆𝒔𝒊𝒅𝒖𝒂𝒍 𝒄𝒂𝒑𝒂𝒄𝒊𝒕𝒚 = • Remember "reverse edge is always IMAGINARY" i.e. for edge (u, v), we
+  assume an imaginary reverse edge (v, u) (even if there actually exists an edge from (v, u) in the graph, we don't 
+  take the graph's original (v, u) edge as reverse edge, but assume some imaginary edge (v, u) as reverse edge.
+
+  • Residual capacity of reverse edge = capacity of reverse edge - flow in reverse edge.
+  • If flow of edge (u, v) = x, then flow of reverse edge (v, u) is taken as -x.
+  • Capacity of reverse edge (v, u) is taken as 0.
+
+# 𝑹𝒆𝒔𝒊𝒅𝒖𝒂𝒍 𝒈𝒓𝒂𝒑𝒉 = A graph represented with the help of it's residual edges.
+
+# So basically Residual capacity signifies "How much still can be send through the the pipe(edge)".
+  And Reverse residual capacity signifies "By how much amount you can decrease the flow through the pipe(edge)".
+
+# 𝑨𝒖𝒈𝒎𝒆𝒏𝒕𝒆𝒅 𝒑𝒂𝒕𝒉 = A path from source to sink such that the residual capacity on every edge of the path > 0.
+
+# 𝑴𝒂𝒙𝒊𝒎𝒖𝒎 𝑭𝒍𝒐𝒘 = It is defined as the maximum amount of flow that the network would allow to flow from source 
+                   to sink.
+
+# 2 algorithms to find out Maximum flow in a network(There are more):
+  • Ford-Fulkerson algorithm.
+  • Edmonds-Karp algorithm.

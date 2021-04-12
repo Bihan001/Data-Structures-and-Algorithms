@@ -1,0 +1,24 @@
+
+# Difference b/w Explicit Graph & Implicit Graph ------>
+  • Explicit Graph:
+    – All vertices are identified individually and represented separately.
+    – All edges are identified individually and represented separately.
+
+  • Implicit Graph:
+    – Only a subset, possibly only one, of the vertices is given an explicit representation. (The others 
+      are implied.) or we can say it is a graph whose vertices or edges are not represented as explicit objects 
+      in a computer's memory, but rather are determined algorithmically from some more concise input.
+    – Only a subset, and possibly zero, of the edges is given an explicit representation.
+    – A set of “operators” is provided that can be used to construct “new” edges and vertices. 
+
+
+# 𝑪𝒐𝒎𝒑𝒍𝒆𝒕𝒆 𝒈𝒓𝒂𝒑𝒉: it is a simple undirected graph in which every pair of distinct vertices is connected by a 
+                   unique edge. 
+# 𝑪𝒐𝒎𝒑𝒍𝒆𝒕𝒆 𝒅𝒊𝒈𝒓𝒂𝒑𝒉: it is a directed graph in which every pair of distinct vertices is connected by a pair of
+                     unique edges (one in each direction i.e. bi-directional edges).
+
+# 𝑺𝒊𝒎𝒑𝒍𝒆 𝒈𝒓𝒂𝒑𝒉: A graph which has neither self loops nor multiple edges(parallel edges.) i.e. where each edge 
+                 connects two distinct vertices and no two edges connects the same pair of vertices is called a simple graph. 
+# 𝑴𝒖𝒍𝒕𝒊𝒈𝒓𝒂𝒑𝒉: Any graph which contains some multiple edges is called a multigraph. In a multigraph, no self loops
+              are allowed.
+# 𝑷𝒔𝒆𝒖𝒅𝒐 𝒈𝒓𝒂𝒑𝒉: A graph in which self loops and multiple edges are allowed is called psuedograph.

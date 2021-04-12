@@ -1,0 +1,58 @@
+# Spanning Tree - it is a subset of Graph G (a tree), which has 𝑨𝑳𝑳 the vertices covered with 𝑴𝑰𝑵𝑰𝑴𝑼𝑴 
+                  possible number of edges. Hence, a spanning tree does not have cycles and it cannot be disconnected (as it is a tree).
+
+# By the above definition, we can draw a conclusion that every connected and undirected Graph G has at least 
+  one spanning tree.
+
+# 𝑨 𝒅𝒊𝒔𝒄𝒐𝒏𝒏𝒆𝒄𝒕𝒆𝒅 𝒈𝒓𝒂𝒑𝒉 𝒅𝒐𝒆𝒔 𝒏𝒐𝒕 𝒉𝒂𝒗𝒆 𝒂𝒏𝒚 𝒔𝒑𝒂𝒏𝒏𝒊𝒏𝒈 𝒕𝒓𝒆𝒆, 𝒂𝒔 𝒊𝒕 𝒄𝒂𝒏𝒏𝒐𝒕 𝒃𝒆 𝒔𝒑𝒂𝒏𝒏𝒆𝒅 𝒕𝒐 𝒂𝒍𝒍 𝒊𝒕𝒔 𝒗𝒆𝒓𝒕𝒊𝒄𝒆𝒔.
+
+# A complete undirected graph can have maximum n⁽ⁿ⁻²⁾ number of spanning trees, where n is the number of nodes.
+
+# GENERAL PROPERTIES OF SPANNING TREE ⟶
+  • A connected graph G can have more than one spanning tree.
+  • All possible spanning trees of graph G, have the same number of edges and vertices.
+  • The spanning tree does not have any cycle (loops).
+  • Removing one edge from the spanning tree will make the graph disconnected, i.e. the spanning tree is 
+    𝒎𝒊𝒏𝒊𝒎𝒂𝒍𝒍𝒚 𝒄𝒐𝒏𝒏𝒆𝒄𝒕𝒆𝒅 (i.e. if the spanning tree has 'n' vertices then it will have exactly (n-1) edges).
+  • Adding one edge to the spanning tree will create a circuit or loop, i.e. the spanning tree is 𝒎𝒂𝒙𝒊𝒎𝒂𝒍𝒍𝒚 𝒂𝒄𝒚𝒄𝒍𝒊𝒄.
+
+# MATHEMATICAL PROPERTIES OF SPANNING TREE ⟶
+  • Spanning tree has n-1 edges, where n is the number of nodes (vertices).
+  • From a complete undirected graph graph, by removing maximum (e - n + 1) edges, we can construct a spanning tree.
+  • A complete undirected graph can have maximum n⁽ⁿ⁻²⁾ number of spanning trees.
+
+# APPLICATION OF SPANNING TREE ⟶
+  • Spanning tree is basically used to find a minimum path to connect all nodes in a graph.
+    Common application of spanning trees are −
+    1. Civil Network Planning
+    2. Computer Network Routing Protocol
+    3. Cluster Analysis
+
+# MINIMUM SPANNING TREE (MST) ⟶
+  • In a WEIGHTED graph, a minimum spanning tree is a spanning tree that has 𝑴𝑰𝑵𝑰𝑴𝑼𝑴 weight than all other 
+    spanning trees of the same graph. 
+  • In real-world situations, this weight can be measured as distance, congestion, traffic load or any arbitrary
+    value denoted to the edges.
+  • Minimum spanning tree may or may not be unique.
+    If the weight assign for all the edges of graph are unique, then minimum spanning tree will be unique.
+    Otherwise there can be many minimum spanning tree.
+
+# Algorithms used for finding MST for UG ⟶ 
+  • Kruskal's Algorithm
+  • Prim's Algorithm
+  (𝑩𝒐𝒕𝒉 𝒂𝒓𝒆 𝒈𝒓𝒆𝒆𝒅𝒚 𝒂𝒍𝒈𝒐𝒓𝒊𝒕𝒉𝒎𝒔.)
+
+# Total number of Spanning Trees in a Graph: --->
+  https://www.geeksforgeeks.org/total-number-spanning-trees-graph/
+
+# 𝑻𝒉𝒆 𝒆𝒒𝒖𝒊𝒗𝒂𝒍𝒆𝒏𝒕 𝒐𝒇 𝒂 𝒎𝒊𝒏𝒊𝒎𝒖𝒎 𝒔𝒑𝒂𝒏𝒏𝒊𝒏𝒈 𝒕𝒓𝒆𝒆 𝒊𝒏 𝒂 𝒅𝒊𝒓𝒆𝒄𝒕𝒆𝒅 𝒈𝒓𝒂𝒑𝒉 𝒊𝒔 𝒄𝒂𝒍𝒍𝒆𝒅 𝒂𝒏 𝒐𝒑𝒕𝒊𝒎𝒖𝒎 𝒃𝒓𝒂𝒏𝒄𝒉𝒊𝒏𝒈 𝒐𝒓 𝒂
+  𝒎𝒊𝒏𝒊𝒎𝒖𝒎-𝒄𝒐𝒔𝒕 𝒂𝒓𝒃𝒐𝒓𝒆𝒔𝒄𝒆𝒏𝒄𝒆. 𝑻𝒉𝒆 𝒄𝒍𝒂𝒔𝒔𝒊𝒄𝒂𝒍 𝒂𝒍𝒈𝒐𝒓𝒊𝒕𝒉𝒎 𝒇𝒐𝒓 𝒔𝒐𝒍𝒗𝒊𝒏𝒈 𝒕𝒉𝒊𝒔 𝒑𝒓𝒐𝒃𝒍𝒆𝒎 𝒊𝒔 𝒕𝒉𝒆 𝑪𝒉𝒖-𝑳𝒊𝒖/𝑬𝒅𝒎𝒐𝒏𝒅𝒔 𝒂𝒍𝒈𝒐𝒓𝒊𝒕𝒉𝒎.
+  visit: https://stackoverflow.com/questions/21991823/finding-a-minimum-spanning-tree-on-a-directed-graph
+
+# Why Prim’s and Kruskal’s MST algorithm fails for Directed Graph?
+  visit: https://www.geeksforgeeks.org/why-prims-and-kruskals-mst-algorithm-fails-for-directed-graph/
+
+# MAXIMUM SPANNING TREE ⟶ It is a spanning tree with weight greater than or equal to the weight of every other
+  spanning tree. 
+  Such a tree can be found with algorithms such as Prim's or Kruskal's after multiplying the edge weights by -1
+  and solving the MST problem on the new graph.

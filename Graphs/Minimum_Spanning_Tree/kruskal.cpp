@@ -14,7 +14,24 @@ using namespace std;
 #define pii pair<int, int>
 #define mii map<int, int>
 
-// Finding the minimum spanning tree using Kruskal's algorithm and DSU data structure
+/*
+   # Kruskal's algorithm to find the minimum cost spanning tree uses the greedy approach.
+
+   # Performs better for sparse graphs. For dense graphs, check prim's algorithm.
+
+   # Works only in undirected graphs.
+
+   # Works with an edge list representation of the graph.
+
+   # Uses dsu with path compression
+
+   # Algorithm:
+     Sort the edge list
+     Loop through the edge list and add the edges to mst if the src and dest vertices of the edges don't have a common parent in the dsu.
+     Union the src and dest vertices in the dsu.
+
+   # Time complexity: O(ELogE + ELogV) | Space complexity: O(1)
+*/
 
 // Get function for DSU
 int Get(mii &parent, int a) {
@@ -40,7 +57,6 @@ bool comp(vi &a, vi &b) {
     return a[2] < b[2];
 }
 
-// Time complexity: O(ELogE + ELogV) | Space complexity: O(1)
 vector<vi> kurskal(vector<vi> &edges) {
     vector<vi> mst;
     mii parent, rank;

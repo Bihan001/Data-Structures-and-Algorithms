@@ -2,8 +2,13 @@
 
 using namespace std;
 
-// In the graph, we have an array of vertices. When we set edges of the vertices, we consider the vertex's index in the array instead of the vertex itself.
-// Every vertex object holds a data variable and the list of indexes of its neighbours.
+/* Topological sort:
+    # The edges of the graph can be unidirectional/bidirectional.
+    # Requires a stack.
+    # Run dfs on the graph and push each vertex in a stack after all its neighbours are visited.
+      Pop each vertex from the stack and add it to a list to get the topologically sorted list of vertices.
+    # Time complexity: O(V + E) | Space complexity: O(V)
+*/
 
 class Vertex {
    public:

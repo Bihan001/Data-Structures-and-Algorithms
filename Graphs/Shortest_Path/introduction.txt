@@ -1,0 +1,11 @@
+
+# Important points:
+  Use BFS when no weights are associated with edges in the graph.
+  Use Dijkstra when +ve weights are associated with edges in the graph.
+  Use Bellman-Ford when -ve weights and -ve cycles associated with edges in the graph.
+
+# Time complexities:
+  BFS: O(V+E)
+  Dijkstra: O(V.log(E))
+  Bellman-Ford: O(V.E)
+  Floyd-Warshall: O(V^3)

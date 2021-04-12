@@ -2,8 +2,12 @@
 
 using namespace std;
 
-// In the graph, we have an array of vertices. When we set edges of the vertices, we consider the vertex's index in the array instead of the vertex itself.
-// Every vertex object holds a data variable and the list of indexes of its neighbours.
+/*
+    # Depth First Search Traversal to detect cycles.
+    # Requires a stack.
+    # The edges of the graph can be unidirectional/bidirectional.
+    # Time complexity: O(V + E) | Space complexity: O(V)
+*/
 
 class Vertex {
    public:

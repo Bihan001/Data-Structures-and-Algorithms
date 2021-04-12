@@ -14,9 +14,16 @@ using namespace std;
 #define pii pair<int, int>
 #define mii map<int, int>
 
-// Finding the minimum spanning tree using Prim's algorithm
+/*
+   # Like Kruskal’s algorithm, Prim’s algorithm is also a Greedy algorithm.
 
-// Time complexity: O() | Space complexity: O()
+   # Works only in undirected graphs.
+
+   # Works with an vertex list representation of the graph.
+
+   # While kruskal's algorithm is good for sparse graphs, prim's algorithm performs better for dense graphs.
+*/
+
 vector<vi> prims(const vector<vector<pii>> &graph, int src, int n) {
     priority_queue<vi, vector<vi>, greater<vi>> pq;
     vector<vi> mst;

@@ -1,0 +1,3 @@
+# This data structure is very useful, 2 of the many uses are ⟶
+  • Finding cycles in an UG
+  • also used in Kruskal's algorithm

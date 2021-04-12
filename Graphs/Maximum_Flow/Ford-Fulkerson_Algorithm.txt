@@ -1,0 +1,24 @@
+# Algorithm
+  Step 1. Initialize flow through each edge = 0.
+  Step 2. Initialize max_flow = 0.
+  Step 3. while(there is an augmenting path from source(s) to sink(t) in the residual network graph(whether in
+                residual graph or reverse residual graph or combined)
+          {
+              1. find 'f', the minimum edge weight along the path.
+              2. update the edges of graph in Step 1 accordingly.
+              3. decrease capacity of all edges of the path in the residual graph by f.
+              4. increase capacity of all edges of the path in the reverse residual graph by f.
+              5. max_flow += f
+          }
+
+# It should be noted, that the Ford-Fulkerson method doesn't specify a method of finding the augmenting path. 
+
+# Possible approaches are using DFS or BFS which both work in O(E). If all capacities of the network are integers,
+  then for each augmenting path the flow of the network increases by at least 1 (for more details see Integral flow 
+  theorem). 
+
+# Therefore the complexity of Ford-Fulkerson is O(EF), where F is the maximal flow of the network, thus the time complexity will be large if the max flow is a big number.
+  In case of rational capacities, the algorithm will also terminate, but the complexity is not bounded. 
+  In case of irrational capacities, the algorithm might never terminate, and might not even converge to the 
+  maximal flow.
+
