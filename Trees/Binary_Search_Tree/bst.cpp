@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 class Node {
@@ -18,8 +17,7 @@ class BST {
    private:
     Node* root;
     Node* empty(Node* p) {
-        if (p == NULL)
-            return NULL;
+        if (p == NULL) return NULL;
         empty(p->lchild);
         empty(p->rchild);
         delete p;
@@ -123,21 +121,13 @@ class BST {
     }
 
    public:
-    BST() {
-        root = NULL;
-    }
+    BST() { root = NULL; }
 
-    ~BST() {
-        root = empty(root);
-    }
+    ~BST() { root = empty(root); }
 
-    void insert(int data) {
-        root = insert(root, data);
-    }
+    void insert(int data) { root = insert(root, data); }
 
-    void erase(int key) {
-        root = erase(root, key);
-    }
+    void erase(int key) { root = erase(root, key); }
 
     void display_preorder() {
         preorder(root);
