@@ -19,8 +19,8 @@ int main(int argc, char const *argv[]) {
     for (int i = 0; i < n; i++) cin >> arr[i];
 
     // Each block is of size ceil(sqrt(n))
-    int blockSize = n / ceil(sqrt(n));
-    vi blocks(blockSize, 0);
+    int blockSize = ceil(sqrt(n));
+    vi blocks(n / blockSize + 1, 0);
 
     // (i / blockSize) gives the block index where the index i is belonging to.
     // We store the sum of all elements of a block to the corresponding block of the blocks array
@@ -39,9 +39,9 @@ int main(int argc, char const *argv[]) {
             cin >> index >> value;
 
             // we subtract the old value of the index from its block and add the new value to it
-            int old = arr[index];
-            blocks[index / blockSize] -= old;
+            blocks[index / blockSize] -= arr[index];
             blocks[index / blockSize] += value;
+            arr[index] = value;
             continue;
         }
         // print query
