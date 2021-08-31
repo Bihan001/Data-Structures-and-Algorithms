@@ -8,6 +8,9 @@ using namespace std;
 const int INF = 0x3f3f3f3f;
 const int mod = 1e9 + 7;
 
+// Given a sorted array with some rotations ([1, 2, 3] -> [3, 1, 2] on first rotation), find whether a given number exists in the array
+
+// Time complexity: O(log(n))
 int main(int argc, char const *argv[]) {
     int n, k;
     cin >> n >> k;
