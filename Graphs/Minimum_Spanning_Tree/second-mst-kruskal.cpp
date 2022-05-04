@@ -95,8 +95,10 @@ vector<vi> second_mst_kruskal(vector<vi> &edges, int n) {
     for (int i = 0; i < edges.size(); i++) {
         vector<vi> edges_copy = edges;
         vi tmp_edge = edges_copy[i];
+       // Removing ith edge
         edges_copy.erase(edges_copy.begin() + i);
-        for (int j = 0; j < edges_copy.size(); j++) {
+       // Removing opposite edge as the graph is bidirectional 
+       for (int j = 0; j < edges_copy.size(); j++) {
             if (edges_copy[j][0] == tmp_edge[1] && edges_copy[j][1] == tmp_edge[0] && edges_copy[j][2] == tmp_edge[2]) {
                 edges_copy.erase(edges_copy.begin() + j);
                 break;
